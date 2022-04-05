@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+
+}
+
+body{
+    margin-top: 80px;
+    margin-left: 80px;
+    background: #0c141b;
+    transition: margin-left 300ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+
+
+
+#main__header{
+    transition: all 300ms;
+}
+
+.icon__menu{
+    width: 30px;
+   
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(25px);
+}
+
+.icon__menu i{
+
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    color: rgb(255, 255, 255);
+}
+
+.main__sidebar{
+    width: 0px;
+    height: 100%;
+    top:0;
+    left:0;
+    background: #02101d;
+    position:fixed;
+    font-size: 18px;
+    color: aliceblue;
+    z-index: 300;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
+    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
+
+}
+
+.sideBar__h4{
+    font-size: 15px;
+    text-decoration: none;
+}
+
+/*Ocultar Scroll chrome, safari y opera*/
+
+.main__sidebar::-webkit-scrollbar{
+    display: none;
+}
+/*Ocultar Scroll IE, Edge y Firefox*/
+
+.main__sidebar::-webkit-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.main__sidebar a{
+    font-size: 15px;
+    color: aliceblue;
+   
+
+}
+
+.name__page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+    
+}
+.name__page h4{
+    font-weight:400;
+}
+.name__page i{
+    width: 20px;
+    margin-right: 20px;
+}
+
+.options__menu{
+    padding: 20px 30px;
+    position: absolute;
+    top:80px;
+    
+}
+
+.options__menu a{
+    color:#f5f5f5;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+    text-decoration: none;
+}
+
+.options__menu a:hover{
+    color: aqua;
+}
+
+.options__menu .menu__item{
+    padding:10px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.options__menu .menu__item i{
+    width: 20px;
+    margin-right: 20px;
+   
+    cursor: pointer ;
+}
+
+.options__menu .menu__item h4{
+    font-weight: 300;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+a.selected{
+    color: #05ff9f
+}
+
+.body__move{
+    margin-left: 120px;
+}
+
+.menu__side_move{
+    width: 200px;
+    transition: all 300ms;
+}
+
+
+@media  screen and (max-width: 760px) {
+    .body__move{
+        margin-left: 0px;
+    }
+
+    .menu__side_move{
+        width: 80px;
+        left: -80px;
+    }
+    
+}
+
+main{
+    margin-top: 100px;
+}
