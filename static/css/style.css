@@ -25,12 +25,11 @@ body{
 
 .icon__menu{
     width: 30px;
-   
-    height: 100%;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateX(25px);
+    transform: translateX(5px);
 }
 
 .icon__menu i{
@@ -42,9 +41,9 @@ body{
 }
 
 .main__sidebar{
-    width: 0px;
+    width: 0;
     height: 100%;
-    top:0;
+    top:50px;
     left:0;
     background: #02101d;
     position:fixed;
@@ -53,8 +52,7 @@ body{
     z-index: 300;
     overflow-x: hidden;
     overflow-y: scroll;
-    
-    transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
+    transition: all 300ms;
 
 }
 
@@ -86,9 +84,7 @@ body{
     padding: 20px 30px;
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    
-    
+    margin-top: 10px; 
 }
 .name__page h4{
     font-weight:400;
@@ -143,7 +139,8 @@ a.selected{
 }
 
 .body__move{
-    margin-left: 120px;
+    margin-left: 200px;
+    transition: all 300ms;
 }
 
 .menu__side_move{
