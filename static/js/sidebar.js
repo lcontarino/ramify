@@ -11,21 +11,21 @@ function open_close_menu(){
     menu_side.classList.toggle("menu__side_move");
 }
 
-// if (window.innerWidth > 760){
-//     body.classList.add("body__move");
-//     menu_side.classList.add("menu__side_move");
+if (window.innerWidth > 760){
+    body.classList.add("body__move");
+    menu_side.classList.add("menu__side_move");
     
-// }
+}
 
-// window.addEventListener("resize",function(){
+window.addEventListener("resize",function(){
 
-//     if (window.innerWidth >760){
-//         body.classList.remove("body__move");
-//         menu_side.classList.remove("menu__side_move");
-//     }
+    if (window.innerWidth >760){
+        body.classList.remove("body__move");
+        menu_side.classList.remove("menu__side_move");
+    }
 
-//     if (window.innerWidth < 760){
-//         body.classList.add ("body__move");
-//         menu_side.classList.add("menu__side_move");
-//     }
-// });
+    if (window.innerWidth < 760){
+        body.classList.add ("body__move");
+        menu_side.classList.add("menu__side_move");
+    }
+});

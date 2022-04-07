@@ -1,4 +1,6 @@
+/*GOOGLE FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -11,13 +13,16 @@
 }
 
 body{
-    margin-top: 80px;
-    margin-left: 80px;
-    background: #0c141b;
     transition: margin-left 300ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
 }
 
-
+.bg{
+    background-image: url("/templates/simple-login/webpack/build/imgs/lock-gf1ee4d14c_1920.webp");
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    
+}
 
 #main__header{
     transition: all 300ms;
@@ -43,7 +48,7 @@ body{
 .main__sidebar{
     width: 0;
     height: 100%;
-    top:50px;
+    top:0px;
     left:0;
     background: #02101d;
     position:fixed;
@@ -58,6 +63,7 @@ body{
 
 .sideBar__h4{
     font-size: 15px;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -79,15 +85,23 @@ body{
    
 
 }
-
+.navbar{
+    transition: all 300ms;
+}
 .name__page{
-    padding: 20px 30px;
+    padding: 10px 0px;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 10px; 
 }
-.name__page h4{
-    font-weight:400;
+.name__page a{
+    text-decoration: none;
+    transition: color 1000ms;
+}
+.name__page h3{
+    font-family: 'Lexend Mega', sans-serif;
+    font-weight:500;
 }
 .name__page i{
     width: 20px;
@@ -102,16 +116,17 @@ body{
 }
 
 .options__menu a{
-    color:#f5f5f5;
     cursor: default;
     display: block;
     position: relative;
     transition: color 300ms;
     text-decoration: none;
+    transition: color 600ms;
 }
 
 .options__menu a:hover{
     color: aqua;
+    
 }
 
 .options__menu .menu__item{
@@ -124,12 +139,12 @@ body{
 .options__menu .menu__item i{
     width: 20px;
     margin-right: 20px;
-   
     cursor: pointer ;
 }
 
 .options__menu .menu__item h4{
-    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     cursor: pointer;
     white-space: nowrap;
 }
@@ -159,8 +174,4 @@ a.selected{
         left: -80px;
     }
     
-}
-
-main{
-    margin-top: 100px;
 }

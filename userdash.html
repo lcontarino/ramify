@@ -92,9 +92,9 @@
         <div class="main__sidebar" id="menu_side">
             <div class="name__page">
                 <!-- <i class="fa-brands fa-youtube"></i> -->
-            <a  href="./index.html">
-                 <h3> RAMIFY</h3>
-                </a>
+                <a  href="./index.html">
+                    <h3> RAMIFY</h3>
+                   </a>
             </div>
 
             <div class="options__menu">
@@ -108,8 +108,8 @@
                     <div class="menu__item">
                         <i class="fa fa-briefcase"></i>
                         <a href="./userdash.html">
-                            <h4 class="sideBar__h4">My Works</h4>
-                        </a>
+                        <h4 class="sideBar__h4">My Works</h4>
+                    </a>
                     </div>
                 </a>
 
@@ -141,71 +141,47 @@
 
 
 
-        <!-- LOGIN FORM  -->
+        <!-- APP  -->
         <div class="container text-center">
-            <div class="row align-items-lg-stretch">
-                <div class="col bg rounded-start d-none d-lg-block col-md-5 col-lg-5 col-xl-6 "></div>
-                <div class="col p-5 ">
-                    <div class="text-end">
-                        <img src="/templates/simple-login/webpack/build/imgs/bootstrap_logo.png" width="48px"
-                            alt="bootstrap logo">
-                    </div>
-                    <h2 class="fw-bold text-center py-3">Welcome</h2>
-                    <!-- Login Form -->
-                    <form action="#">
-                        <div class="mb-4">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" name="email">
-                        </div>
-                        <div class="mb-4">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" name="password">
-                        </div>
-                        <div class="mb-4 form-check">
-                            <input type="checkbox" name="conected" class="form-check-input">
-                            <label for="connected" class="form-check-label">Remember me</label>
-                        </div>
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Login</button>
-                        </div>
-                        <div class="my-3">
-                            <span>Not have Account ? <a href="#">Register</a></span> <br>
-                            <span><a href="#">Reset Password</a></span>
-                        </div>
-                    </form>
-                    <!-- Login with social -->
-                    <div class="container w-100 my-5">
-                        <div class="row text-center">
-                            <div class="col-12">Login</div>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-outline-primary w-100 my-1">
-                                        <div class="row align-items-center">
-                                            <div class="col-2 d-none d-md-block">
-                                                <i class="fa-brands fa-facebook "></i>
-                                            </div>
-                                            <div class="col-12 col-md-10 fw-bolder text-center">
-                                                Facebook
-                                            </div>
-                                        </div>
-                                    </button>
+            <!-- ADD PROJECT -->
+            <div id="App" class="row pt-5">
+                <div class="col-md-4">
+                    <div class="card text-white bg-dark mb-3">
+
+
+
+                        <div class="card-body">
+                            <h5 class="card-title">Create Project</h5>
+                            <form id="project-form">
+                                <div class="form-control-lg">
+                                    <input type="text" id="name" placeholder="Project Name" class="form-control">
                                 </div>
-                                <div class="col">
-                                    <button class="btn btn-outline-danger w-100 my-1">
-                                        <div class="row align-items-center">
-                                            <div class="col-2 d-none d-md-block">
-                                                <i class="fa-brands fa-google "></i>
-                                            </div>
-                                            <div class="col-12 col-md-10 fw-bolder text-center">
-                                                Google
-                                            </div>
-                                        </div>
-                                    </button>
+                                <div class="form-control-lg">
+                                    <input type="file" id="image" placeholder="Select Image" class="form-control"
+                                        accept="image/png, image/jpg, image/jpeg">
                                 </div>
-                            </div>
+                                <div class="form-control-lg">
+                                    <input type="text" min="0" id="description" placeholder="Description"
+                                        class="form-control">
+                                </div>
+                                <div class="form-control-lg">
+                                    <input type="number" id="year" min="1900" value="2022" placeholder="2022"
+                                        class="form-control">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Add Project</button>
+
+                            </form>
+
                         </div>
                     </div>
+
+                    <!-- LIST PROJECTS -->
+
+
                 </div>
+                <div id="project-list" class="col-md-6"></div>
+
             </div>
         </div>
 
