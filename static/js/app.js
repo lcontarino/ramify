@@ -3,31 +3,7 @@ const categories = ['HTML', 'CSS', 'SCSS', 'POSTCSS',
   'PUSHER', 'EMBER.JS', 'METEOR.JS',
   'AURELIA', 'FEATHERS.JS']
 
-const works = [{
-  id: 0,
-  name: "Primer Trabajo",
-  description: "Primer trabajo de Storage",
-  image: "/images/prueba.jpg",
-  date: "04/03/2022",
-  tags: ['javascript', 'webdevelopment'],
-},
-{
-  id: 1,
-  name: "Segundo Trabajo",
-  description: "Segundo trabajo de Storage",
-  image: "/images/prueba.jpg",
-  date: "04/03/2022",
-  tags: ['react', 'node', 'javascript'],
-},
-{
-  id: 1,
-  name: "Tercer Trabajo",
-  description: "Tercer trabajo de Storage",
-  image: "/images/prueba.jpg",
-  date: "04/03/2022",
-  tags: ['vue', 'angular', 'bootstrap'],
-}
-]
+
 
 class Project {
   constructor(image, name, description, year) {
@@ -85,7 +61,7 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
 
 })
 //save_localStorage();
-load_localStorage();
+//load_localStorage();
 
 function save_localStorage() {
   let works = {
@@ -112,4 +88,3 @@ function load_localStorage() {
     console.log("No hay Datos que mostrar");
   }
 }
-
