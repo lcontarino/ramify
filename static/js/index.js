@@ -27,22 +27,22 @@ const works = [{
   }
   ]
   
- works.forEach((workName) => {
-    const projectList = document.getElementById('project-list');
+ works.forEach((works) => {
+    const worktList = document.getElementById('works-list');
     const element = document.createElement('div');
     element.innerHTML = `
     
      <div class="card" style="width: 18rem;">
      <img class="card-img-top" src="/images/prueba.jpg" alt="Card image cap">
      <div class="card-body">
-       <h5 class="card-title">aasdas</h5> 
-       <p class="card-text">asdasd</p>
+       <h5 class="card-title">${works.name}</h5> 
+       <p class="card-text">${works.description}</p>
        <a href="#" class="btn btn-primary">View More</a>
      </div>
    </div>
    
      `;
-     projectList.appendChild(element);
+     worktList.appendChild(element);
       //console.log(workName.name)
      
          //console.log(workName);

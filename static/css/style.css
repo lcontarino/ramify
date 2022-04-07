@@ -175,3 +175,13 @@ a.selected{
     }
     
 }
+
+#works-list{
+    padding-left: 25px;
+    margin-right: 10px;
+display: flex;
+flex-direction: row;
+}
+.card{
+    margin-right: 10px;
+}
