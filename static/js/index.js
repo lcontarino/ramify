@@ -4,7 +4,7 @@ const works = [{
     id: 1,
     name: "Primer Trabajo",
     description: "Primer trabajo de Storage",
-    image: "./imags/prueba.jpg",
+    image: "./images/prueba.jpg",
     date: "04/03/2022",
     tags: ['javascript', 'webdevelopment'],
   },
