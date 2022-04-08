@@ -24,7 +24,25 @@ const works = [{
     image: "/images/prueba.jpg",
     date: "04/03/2022",
     tags: ['vue', 'angular', 'bootstrap'],
-  }
+  },
+  {
+    userId: 1,
+    id: 1,
+    name: "Cuarto Trabajo",
+    description: "Cuarto trabajo de Storage",
+    image: "/images/prueba.jpg",
+    date: "04/03/2022",
+    tags: ['javascript', 'webdevelopment'],
+  },
+  {
+    userId: 1,
+    id: 1,
+    name: "Quinto Trabajo",
+    description: "Quinto trabajo de Storage",
+    image: "/images/prueba.jpg",
+    date: "04/03/2022",
+    tags: ['javascript', 'webdevelopment'],
+  },
   ]
   
  works.forEach((works) => {
