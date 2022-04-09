@@ -2,19 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
     text-decoration: none;
+} 
 
-} */
-
-/* body{
+body{
     transition: margin-left 300ms cubic-bezier(0.075, 0.82, 0.165, 1) ;
-} */
+}
 
 .bg{
     background-image: url("/templates/simple-login/webpack/build/imgs/lock-gf1ee4d14c_1920.webp");
@@ -177,6 +176,9 @@ a.selected{
 .card{
     margin-bottom: 15px;
 }
+.card-title{
+    font-family: 'Lexend Mega', sans-serif;
+}
 @media  screen and (max-width: 760px) {
     .body__move{
         margin-left: 0px;
@@ -195,3 +197,19 @@ a.selected{
     }
 
 }
+.work__card-footer{
+    display: flex;
+    
+    color: rgb(239, 45, 86);
+    margin-top: 5px;
+    align-items: center;
+    border-top: 1px solid black;
+    height: 20px;
+    width: 100%;
+};
+
+.fa-heart{
+    
+    background-color: rgb(22, 255, 1);
+    padding-right: 5px;
+};

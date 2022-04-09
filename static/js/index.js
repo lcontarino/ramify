@@ -57,9 +57,9 @@ const works = [{
     element.innerHTML = `
     
      <div class="card" style="width: 18rem;">
-     <img class="card-img-top" src="/images/prueba.jpg" alt="Card image cap">
+     <img class="card-img-top" src="./images/prueba.jpg" alt="Card image cap">
      <div class="card-body">
-       <h5 class="card-title">${works.name}</h5> 
+       <h5 class="card-title">${works.name}</h5>
        <p class="card-text">${works.description}</p>
        <a href="#" class="btn btn-primary">View More</a>
        <div class="row">
@@ -67,7 +67,12 @@ const works = [{
        <div class="progress mt-2">
        <div class="progress-bar" style="width: ${works.progress}; background:#ef2d56;">
        <div class="progress-value">${works.progress}</div>
+      
        </div>
+      
+       </div>
+       <div class="work__card-footer">
+            <i class="fa-solid fa-heart"></i>
        </div>
        </div>
      </div>
