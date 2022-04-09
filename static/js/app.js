@@ -18,7 +18,7 @@ class Project {
 
 class UI {
   addProject(project) {
-    const projectList = document.getElementById('project-list');
+    const projectList = document.getElementById('works-list');
     const element = document.createElement('div');
     element.innerHTML = `
     <div class="card" style="width: 18rem;">
@@ -26,7 +26,7 @@ class UI {
        <div class="card-body">
          <h5 class="card-title">${project.name}</h5> 
          <p class="card-text">${project.description}</p>
-         <a href="#" class="btn btn-primary">Delete</a>
+         <a href="#" class="btn btn-primary">Publish</a>
        </div>
      </div>
      
