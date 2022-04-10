@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAMIFY</title>
+    <title>RamiFy Code Editor</title>
     <link rel="stylesheet" href="./static/css/style.css">
+
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,27 +18,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body id="body">
+<body id="body" class="bg-white">
 
-    <div>
-
-
-
-        <!-- <div class="icon__menu">
-            <i class="fas fa-bars" id="btn_open"></i>
-        </div> -->
+    <div class="col-lg-12">
         <!-- NAVBAR -->
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg  bg-indigo-800">
             <div class="container-fluid" id="main__header">
                 <div class="icon__menu">
                     <i class="fas fa-bars" id="btn_open"></i>
                 </div>
                 <div class="container-fluid">
                     <form action="" class="">
-                        <div class="input-group">
-                            <input type="text" class="form-control form-control-lg" placeholder="Search Here">
-                            <button type="submit" class="input-group-text btn-light"><i
+                        <div class="input-group ">
+                            <input type="text" class="form-control form-control-sm" placeholder="Search Here">
+                            <button type="submit" class="input-group-text btn-dark bg-indigo-800 "><i
                                     class="bi bi-search me-2"></i> Search</button>
                         </div>
                     </form>
@@ -82,7 +76,7 @@
                         </li>
                         <!-- END NAVBAR BUTTONS-->
                     </ul>
-                    
+
                 </div>
             </div>
         </nav>
@@ -92,9 +86,9 @@
         <div class="main__sidebar" id="menu_side">
             <div class="name__page">
                 <!-- <i class="fa-brands fa-youtube"></i> -->
-                <a  href="./index.html">
+                <a href="./index.html">
                     <h3> RAMIFY</h3>
-                   </a>
+                </a>
             </div>
 
             <div class="options__menu">
@@ -106,10 +100,11 @@
                 </a>
                 <a href="#">
                     <div class="menu__item">
-                        <i class="fa fa-briefcase"></i>
+
                         <a href="./userdash.html">
-                        <h4 class="sideBar__h4">My Works</h4>
-                    </a>
+                            <i class="fa fa-briefcase"></i>
+                            <h4>My Works</h4>
+                        </a>
                     </div>
                 </a>
 
@@ -137,68 +132,50 @@
                 </a>
             </div>
         </div>
+        <!-- DIV FOR CODE  -->
+        <div class="container-fluid bg-indigo-100">
 
-
-
-
-        <!-- APP  -->
-        <div class="container text-center">
-            <!-- ADD PROJECT -->
-            <div id="App" class="row pt-5">
-                <div class="col-md-4">
-                    <div class="card text-white bg-dark mb-3">
-
-
-
-                        <div class="card-body">
-                            <h5 class="card-title">Create Project</h5>
-                            <form id="project-form">
-                                <div class="form-control-lg">
-                                    <input type="text" id="name" placeholder="Project Name" class="form-control">
-                                </div>
-                                <div class="form-control-lg">
-                                    <input type="file" id="image" placeholder="Select Image" class="form-control"
-                                        accept="image/png, image/jpg, image/jpeg">
-                                </div>
-                                <div class="form-control-lg">
-                                    <input type="text" min="0" id="description" placeholder="Description"
-                                        class="form-control">
-                                </div>
-                                <div class="form-control-lg">
-                                    <input type="date" id="date"
-                                    min="2022-01-01" max="2022-12-31"
-                                        class="form-control">
-                                </div>
-                                <div class="form-control-lg">
-                                    <input type="text" min="0" id="tags" placeholder="Tags"
-                                        class="form-control">
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Add Project</button>
-
-                            </form>
-
-                        </div>
-                    </div>
-
-                 </div>
-               <!-- DIV FOR PROJECTS  -->
-        <div class="container-fluid text-center">
-            <div id="works-list"></div>
-        </div>
-
+            <div class="editor">
+                <div class="editor_code co_html">
+                    <textarea id="h">
+             <h1>Title</h1>
+             <p>
+             This is text in a paragraph. 
+             It can be <big>big</big> or <small>small</small>. 
+             It can be <b>bold</b> or <i>italic.</i>
+             </p>
+             <button>Button</button>
+                 </textarea>
+                </div>
+                <div class="editor_code co_css">
+                    <textarea id="c">
+             button {
+               background:yellow;
+             }
+                 </textarea>
+                </div>
+                <div class="editor_code co_js">
+                    <textarea id="j">
+                     //Type JS Here   
+                 </textarea>
+                </div>
             </div>
+            <div class="viewer"><iframe id="iframe"></iframe>
+            </div>
+            <div class="btn btn-sm btn-primary" onclick="Run()"><big><i class="fa fa-refresh"></i> Load</big></div>
+            <a class="run" target="_blank" href="#">View Code Samples</a>
         </div>
 
 
+        <!-- FOOTER -->
         <!-- Footer -->
-        <footer class="bg-dark text-center text-white ">
+        <footer class="bg-dark text-center text-white">
             <!-- Grid container -->
-            <div class="container-fluid p-4">
+            <div class="container p-4">
                 <!-- Section: Social media -->
                 <section class="mb-4">
                     <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                    <a class="btn btn-outline-light btn-floating m-1 " href="#!" role="button"><i
                             class="fab fa-facebook-f"></i></a>
 
                     <!-- Twitter -->
@@ -239,9 +216,9 @@
                             <!--Grid column-->
                             <div class="col-md-5 col-12">
                                 <!-- Email input -->
-                                <div class="form-outline form-white mb-5">
-                                    <input type="email" id="form5Example21" class="form-control" />
-                                    <label class="form-label" for="form5Example21">Email address</label>
+                                <div class="form-outline form-white mb-4">
+                                    <input type="email" id="form5Example2" class="form-control" />
+                                    <label class="form-label" for="form5Example2">Email address</label>
                                 </div>
                             </div>
                             <!--Grid column-->
@@ -260,25 +237,126 @@
                 </section>
                 <!-- Section: Form -->
 
+                <!-- Section: Text -->
+                <section class="mb-4">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+                        eum harum corrupti dicta, aliquam sequi voluptate quas.
+                    </p>
+                </section>
+                <!-- Section: Text -->
 
+                <!-- Section: Links -->
+                <section class="">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Links</h5>
 
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white">Link 1</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 3</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Links</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white">Link 1</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 3</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Links</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white">Link 1</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 3</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Links</h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white">Link 1</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 2</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 3</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Link 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </section>
+                <!-- Section: Links -->
             </div>
             <!-- Grid container -->
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2020 Copyright:
-                <a class="text-white" href="#">ramiFy.com</a>
+                <a class="text-white" href="https://ramify.com/">RamiFy.com</a>
             </div>
             <!-- Copyright -->
         </footer>
         <!-- Footer -->
+        <!-- END FOOTER -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="./static/js/app.js"></script>
+    <script src="./static/js/codeeditor.js"></script>
+    <script src="./static/js/index.js"></script>
     <script src="./static/js/sidebar.js"></script>
 </body>
 

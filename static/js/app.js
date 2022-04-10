@@ -1,18 +1,17 @@
+const name = document
+
 const categories = ['HTML', 'CSS', 'SCSS', 'POSTCSS',
   'JS', 'REACT', 'VUE', 'Babel',
   'PUSHER', 'EMBER.JS', 'METEOR.JS',
   'AURELIA', 'FEATHERS.JS']
 
-
-
 class Project {
-  constructor(image, name, description, year) {
-    this.image = image;
+  constructor(name, description, image, date,tags) {
     this.name = name;
     this.description = description;
-    this.year = year;
-
-
+    this.image = image;
+    this.date = date;
+    this.tags = tags;
   }
 }
 
@@ -29,7 +28,6 @@ class UI {
          <a href="#" class="btn btn-primary">Publish</a>
        </div>
      </div>
-     
        `;
     projectList.appendChild(element);
   }
@@ -46,13 +44,18 @@ class UI {
 
 document.getElementById('project-form').addEventListener('submit', function (e) {
   const name = document.getElementById('name').value;
+  const description = document.getElementById('description').value;
   const image = document.getElementById('image').files[0].name;
-  const price = document.getElementById('description').value;
-  const year = document.getElementById('year').value;
+  const date = document.getElementById('date').value;
+  const tags = document.getElementById('tags').value;
 
-  console.log(name, image, price, year);
+  console.log(name, description, image, date,tags);
+
+  //localStorage.setItem("Project Name", name);
+  save_localStorage(name, description, image, date,tags)
+
   /*CREATE A NEW PROJECT*/
-  const project = new Project(image, name, price, year);
+  const project = new Project(name, description, image, date,tags);
   const ui = new UI();
   ui.addProject(project);
   ui.resetForm();
@@ -63,21 +66,20 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
 //save_localStorage();
 //load_localStorage();
 
-function save_localStorage() {
+function save_localStorage(name, description, image, date,tags) {
   let works = {
-    name: "Projecto 21",
-    owner: "leonardo Contarino",
-    email: "lcontarino@gmail.com"
+    projectName: name,
+    description: description,
+    projectImage: image,
+    date: date,
+    tags: tags
   }
-  let nombre = "Pedro";
-  localStorage.setItem("nombre", nombre);
-  localStorage.setItem("work", JSON.stringify(works))
+  localStorage.setItem("Name_On_Local", name);
+  localStorage.setItem("Description_On_Local", description);
+  localStorage.setItem("Works_Object", JSON.stringify(works))
 }
 
 function load_localStorage() {
-
-
-
   if (localStorage.getItem("nombre")) {
     let nombre = localStorage.getItem("nombre");
     let work = JSON.parse(localStorage.getItem("work"));

@@ -52,6 +52,7 @@ const works = [{
   ]
   
  works.forEach((works) => {
+   
     const worktList = document.getElementById('works-list');
     const element = document.createElement('div');
     element.innerHTML = `
@@ -61,19 +62,26 @@ const works = [{
      <div class="card-body">
        <h5 class="card-title">${works.name}</h5>
        <p class="card-text">${works.description}</p>
-       <a href="#" class="btn btn-primary">View More</a>
+       <a href="#" class="btn btn-secondary btn-sm">View More</a>
        <div class="row">
        <div class="col-md-12">
        <div class="progress mt-2">
        <div class="progress-bar" style="width: ${works.progress}; background:#ef2d56;">
-       <div class="progress-value">${works.progress}</div>
+       <div class="progress-value"> ${works.progress}</div>
+    
       
        </div>
       
        </div>
        <div class="work__card-footer">
+       <a href="#">
             <i class="fa-solid fa-heart"></i>
+            </a>
        </div>
+       <div class="plunker-card-facets">
+       <div class="plunker-card-tag"> ${works.tags[0]} </div> 
+       <div class="plunker-card-tag"> ${works.tags[1]} </div>
+        </div>
        </div>
      </div>
    </div>
