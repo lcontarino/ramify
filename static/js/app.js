@@ -1,5 +1,3 @@
-const name = document
-
 const categories = ['HTML', 'CSS', 'SCSS', 'POSTCSS',
   'JS', 'REACT', 'VUE', 'Babel',
   'PUSHER', 'EMBER.JS', 'METEOR.JS',
@@ -43,10 +41,10 @@ class UI {
 }
 
 document.getElementById('project-form').addEventListener('submit', function (e) {
-  const name = document.getElementById('name').value;
+  const name = document.getElementById('projectName').value;
   const description = document.getElementById('description').value;
   const image = document.getElementById('image').files[0].name;
-  const date = document.getElementById('date').value;
+  const date = document.getElementById('projectDate').value;
   const tags = document.getElementById('tags').value;
 
   console.log(name, description, image, date,tags);
@@ -90,3 +88,9 @@ function load_localStorage() {
     console.log("No hay Datos que mostrar");
   }
 }
+
+
+function createAccount(){
+
+}
+
