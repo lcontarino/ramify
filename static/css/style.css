@@ -17,7 +17,7 @@ body{
 }
 
 .bg{
-    background-image: url("/templates/simple-login/webpack/build/imgs/lock-gf1ee4d14c_1920.webp");
+    background-image: url("//templates/simple-login/webpack/build/imgs/lock-gf1ee4d14c_1920.webp");
     background-position: center;
     background-size: auto 100%;
     background-repeat: no-repeat;
