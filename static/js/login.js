@@ -11,7 +11,7 @@ document.getElementById('login-form').addEventListener('submit', (e)=>{
 
    
    
-     if (email !== localUsers.email || password !== localUsers.password){
+     if (email === '' || email !== localUsers.email || password !== localUsers.password){
         //alert('Usuario o Password incorrectos');
         Swal.fire(
             'The username or password is incorrect',
