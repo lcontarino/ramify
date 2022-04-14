@@ -1,3 +1,4 @@
+
 document.getElementById('login-form').addEventListener('submit', (e)=>{
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
@@ -9,11 +10,14 @@ document.getElementById('login-form').addEventListener('submit', (e)=>{
     let localUsers = JSON.parse(localStorage.getItem("Uzer_Object"));
 
    
-    if(email === ""){
-        alert('Usuario nulo');
-     } 
+   
      if (email !== localUsers.email || password !== localUsers.password){
-        alert('Usuario o Password incorrectos');
+        //alert('Usuario o Password incorrectos');
+        Swal.fire(
+            'The username or password is incorrect',
+            'Please try again',
+            'error'
+          )
         
      }
      else if(email === localUsers.email && password === localUsers.password){

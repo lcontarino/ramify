@@ -7,7 +7,7 @@ document.getElementById('register-form').addEventListener('submit',  (e) => {
     console.log(name, username, email, password);
     saveUser_localStorage(name, username, email, password);
     e.preventDefault();//Prevent Reload Page after Form Submit
-  
+    resetForm();
   })
 
   function saveUser_localStorage(name, username, email, password) {
@@ -22,4 +22,7 @@ document.getElementById('register-form').addEventListener('submit',  (e) => {
     localStorage.setItem("Email_On_Local", email);
     localStorage.setItem("Pass_On_Local", password);
     localStorage.setItem("Uzer_Object", JSON.stringify(newUser))
+    document.getElementById('project-form').reset();
   }
+
+  
