@@ -152,28 +152,25 @@
                     </div>
                     <h2 class="fw-bold text-center py-3">Register Account</h2>
                     <!-- Login Form -->
-                    <form id="register-form" action="#">
+                    <form id="register-form">
                         
                         <div class="mb-4">
                             <label for="text" class="form-label">Your Name</label>
-                            <input type="text" id="name" class="form-control">
+                            <input type="text" id="name" class="form-control" required="true">
                         </div>
                         <div class="mb-4">
                             <label for="text" class="form-label">Choose a username</label>
-                            <input type="text" id="username" class="form-control">
+                            <input type="text" id="username" class="form-control" required="true">
                         </div>
                         <div class="mb-4">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-control">
+                            <input type="email" id="email" class="form-control" required="true">
                         </div>
                         <div class="mb-4">
                             <label for="password" class="form-label">Password</label>
-                            <input type="password" id="password" class="form-control">
+                            <input type="password" id="password" class="form-control" required="true">
                         </div>
-                        <div class="mb-4 form-check">
-                            <input type="checkbox" name="conected" class="form-check-input">
-                            <label for="connected" class="form-check-label">Remember me</label>
-                        </div>
+                       
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary">Create Account</button>
                         </div>

@@ -94,3 +94,6 @@ const works = [{
         
    
  });
+
+ let work = JSON.parse(localStorage.getItem("Works_Object"));
+    console.log(work);

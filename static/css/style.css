@@ -23,14 +23,27 @@ body{
     background-repeat: no-repeat;
 
 }
-
+.editor-full{
+    display: flex;
+   padding-top: 10px;
+    flex-direction: column;
+}
 .editor {
-    display: inline-block
+    display: flex;
+    flex-direction: row;
+   
+    height: 100%;
+    padding-bottom: 10px;
   }
-  
+  .editor_code{
+      
+    overflow: auto;
+    max-width: 100vw;
+    resize: both;
+  }
   .editor_code textarea {
     width: 30vw;
-    height: calc(100vh/3);
+    
     margin-bottom: -5px;
     resize: none;
     outline: 0 !important;
@@ -41,7 +54,8 @@ body{
   
   .editor_code:before {
     position: absolute;
-    width: calc(30vw - 30px);
+    
+    width: calc(30vw );
     padding: 15px 15px;
     font-family: monospace;
     font-size:15px;
@@ -61,32 +75,31 @@ body{
   .editor_code:nth-of-type(3):before {
     content: "javascript";
   }
-  .editor-fullP{
-      display: flex;
-      flex-direction: row;
-  }
+  
   .editor_code textarea:nth-of-type(1) {
     height: calc(100vh/3 + 1px);
   }
   
   .viewer {
+      display: flex;
+      background-color: white;
     
-    vertical-align: top;
   }
   
   .viewer iframe {
-    width: auto;
+      display: flex;
+    width: 100%;
     height: 100vh;
     border: 0
   }
   
   .run {
+    justify-content: center;
     position:fixed;
     top:20px;
     right:20px;
     padding:10px;
-    border:4px solid rgba(170,170,170,0.8);
-    background:rgba(90,90,90,0.8);
+    border:2px solid rgba(170,170,170,0.8);
     color:white;
     border-radius:4px;
     cursor:pointer;
@@ -211,7 +224,7 @@ body{
 
 .navbar{
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     transition: all 300ms;
 }
 .nav-link {
@@ -223,6 +236,9 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 0px;
+}
+.nav-item a{
+    color: white;
 }
 .name__page a{
     color: white;

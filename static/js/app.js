@@ -51,7 +51,7 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
 
   //localStorage.setItem("Project Name", name);
   save_localStorage(name, description, image, date,tags)
-
+  
   /*CREATE A NEW PROJECT*/
   const project = new Project(name, description, image, date,tags);
   const ui = new UI();
@@ -62,9 +62,9 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
 
 })
 //save_localStorage();
-//load_localStorage();
+load_localStorage();
 
-function save_localStorage(name, description, image, date,tags) {
+function save_localStorage(name, description, image, date, tags) {
   let works = {
     projectName: name,
     description: description,
@@ -78,19 +78,15 @@ function save_localStorage(name, description, image, date,tags) {
 }
 
 function load_localStorage() {
-  if (localStorage.getItem("nombre")) {
-    let nombre = localStorage.getItem("nombre");
-    let work = JSON.parse(localStorage.getItem("work"));
-    console.log(nombre);
-    console.log(work);
+  if (localStorage.getItem("Name_On_Local")) {
+    let nombre = localStorage.getItem("Name_On_Local");
+    let work = JSON.parse(localStorage.getItem("Works_Object"));
+    console.log(work.date);
+    // console.log(work);
   }
   else {
     console.log("No hay Datos que mostrar");
   }
 }
 
-
-function createAccount(){
-
-}
 
