@@ -18,7 +18,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body id="body">
+<body id="body" class="bg-black">
 
     <div class="col-lg-12">
         <!-- NAVBAR -->
@@ -83,9 +83,9 @@
                 </div>
             </div>
         </nav>
-
         <!-- END NAVBAR -->
 
+        <!-- SIDEBAR -->
         <div class="main__sidebar" id="menu_side">
             <div class="name__page">
                 <!-- <i class="fa-brands fa-youtube"></i> -->
@@ -137,9 +137,14 @@
                 </a>
             </div>
         </div>
+        <!-- END SIDEBAR -->
+
+<div class="container-fluid p-2">
+    <div class="btn btn-dark btn-lg">Editor</div>
+    <div class="btn btn-dark btn-sm">Settings</div>
 
         <!-- DIV FOR CODE  -->
-        <div class="container-fluid editor-full  bg-black">
+        <div class="container-fluid editor-full  bg-indigo-100">
             <div class="editor bg-gray-900">
                 <div class="editor_code co_html">
                     <textarea id="h">
@@ -168,7 +173,7 @@
                 <a class="run bg-gray-800" target="_blank" href="https://github.com/lcontarino">View Code Samples</a>
             </div>
             <div class="container-fluid">
-                <div class="viewer mx-auto"><iframe id="iframe"></iframe>
+                <div class="viewer "><iframe id="iframe"></iframe>
                     
                 </div>
                 
@@ -178,7 +183,7 @@
             
         </div> 
 
-
+    </div>
 
        <!-- Footer -->
        <footer class="bg-dark text-center text-white ">
@@ -269,7 +274,6 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="./static/js/codeeditor.js"></script>
-    <script src="./static/js/index.js"></script>
     <script src="./static/js/sidebar.js"></script>
 </body>
 

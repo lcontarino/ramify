@@ -1,3 +1,8 @@
+const categories = ['HTML', 'CSS', 'SCSS', 'POSTCSS',
+  'JS', 'REACT', 'VUE', 'Babel',
+  'PUSHER', 'EMBER.JS', 'METEOR.JS',
+  'AURELIA', 'FEATHERS.JS']
+
 class Project {
   constructor(name, description, image, date,tags) {
     this.name = name;
@@ -8,29 +13,8 @@ class Project {
   }
 }
 
-
-
-document.getElementById('project-form').addEventListener('submit', function (e) {
-  const name = document.getElementById('projectName').value;
-  const description = document.getElementById('description').value;
-  const image = document.getElementById('image').files[0].name;
-  const date = document.getElementById('projectDate').value;
-  const tags = document.getElementById('tags').value;
-
-  console.log(name, description, image, date, tags);
-  saveUser_localStorage(name,description,image,date,tags)
-})
-// const categories = ['HTML', 'CSS', 'SCSS', 'POSTCSS',
-//   'JS', 'REACT', 'VUE', 'Babel',
-//   'PUSHER', 'EMBER.JS', 'METEOR.JS',
-//   'AURELIA', 'FEATHERS.JS']
-
-
-
 class UI {
-  
   addProject(project) {
-    const projectFromLocal = JSON.parse(localStorage.getItem('Project_Object'))
     const projectList = document.getElementById('works-list');
     const element = document.createElement('div');
     element.innerHTML = `
@@ -56,40 +40,55 @@ class UI {
   }
 }
 
-function saveUser_localStorage(name, description, image, date,tags) {
-  let newProject = [];
-  // Condicional para verificar datos dentro del LocalStorage. .
-  if (localStorage.getItem('Project_Object') === null) {
-    // Si esta vacio inserta el array 'newUser'
-    localStorage.setItem("Project_Object", JSON.stringify(newProject));
-    // Limpiamos el Formulario de Registro. 
-    document.getElementById('project-form').reset();
-  }
-/* Obtenemos datos desde el LocalStorage y lo almacenamos 
-  dentro de getUser para asi persistir los datos almacenados con anterioridad.*/
-  let getProject = JSON.parse(localStorage.getItem('Project_Object'));
-   newProject = [{
-    name: name,
-    description: description,
-    image: image,
-    date: date,
-    tags: tags
-  }]
-  //actualizamos el valor de 'getUser' con los valores de 'newUser'
-  getProject.push(newProject); 
+document.getElementById('project-form').addEventListener('submit', function (e) {
+  const name = document.getElementById('projectName').value;
+  const description = document.getElementById('description').value;
+  const image = document.getElementById('image').files[0].name;
+  const date = document.getElementById('projectDate').value;
+  const tags = document.getElementById('tags').value;
 
-  localStorage.setItem("Project_Object", JSON.stringify(getProject));
-  console.log(getProject);
-  document.getElementById('project-form').reset();
+  console.log(name, description, image, date,tags);
 
- 
+  //localStorage.setItem("Project Name", name);
+  save_localStorage(name, description, image, date,tags)
+  
   /*CREATE A NEW PROJECT*/
   const project = new Project(name, description, image, date,tags);
-
   const ui = new UI();
   ui.addProject(project);
-  }
+  ui.resetForm();
 
-  // function loadProject_FromLocal(){
-  //   const projectFromLocal = JSON.parse(localStorage('Project_Object'))
-  // }
+  e.preventDefault();
+
+})
+//save_localStorage();
+load_localStorage();
+
+function save_localStorage(name, description, image, date,tags) {
+  let works = {
+    projectName: name,
+    description: description,
+    projectImage: image,
+    date: date,
+    tags: tags
+  }
+  localStorage.setItem("Name_On_Local", name);
+  localStorage.setItem("Description_On_Local", description);
+  localStorage.setItem("Works_Object", JSON.stringify(works))
+}
+
+function load_localStorage() {
+  if (localStorage.getItem("Name_On_Local")) {
+    let nombre = localStorage.getItem("Name_On_Local");
+    let work = JSON.parse(localStorage.getItem("Works_Object"));
+    console.log(work.date);
+    // console.log(work);
+  }
+  else {
+    console.log("No hay Datos que mostrar");
+  }
+}
+
+
+
+
