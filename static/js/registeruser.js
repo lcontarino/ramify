@@ -25,9 +25,11 @@ function saveUser_localStorage(name, username, email, password) {
     document.getElementById('register-form').reset();
   }
 
+
   /* Obtenemos datos desde el LocalStorage y lo almacenamos 
   dentro de getUser para asi persistir los datos almacenados con anterioridad.*/
   let getUser = JSON.parse(localStorage.getItem('Uzer_Object'));
+
   newUser = [{
     name: name,
     username: username,
