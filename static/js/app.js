@@ -72,8 +72,8 @@ function save_localStorage(name, description, image, date,tags) {
     date: date,
     tags: tags
   }
-  localStorage.setItem("Name_On_Local", name);
-  localStorage.setItem("Description_On_Local", description);
+  //localStorage.setItem("Name_On_Local", name);
+  //localStorage.setItem("Description_On_Local", description);
   localStorage.setItem("Works_Object", JSON.stringify(works))
 }
 
@@ -86,6 +86,8 @@ function load_localStorage() {
   }
   else {
     console.log("No hay Datos que mostrar");
+    let work = JSON.parse(localStorage.getItem("Works_Object",'name'));
+    console.log(work);
   }
 }
 
