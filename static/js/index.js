@@ -88,12 +88,12 @@ const works = [{
    
      `;
      worktList.appendChild(element);
-      //console.log(workName.name)
+          //console.log(workName.name)
      
          //console.log(workName);
-        
+         console.log(works.name);
    
  });
 
  let work = JSON.parse(localStorage.getItem("Works_Object"));
-    console.log(work);
+    

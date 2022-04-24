@@ -17,6 +17,7 @@ class UI {
   addProject(project) {
     const projectList = document.getElementById('works-list');
     const element = document.createElement('div');
+    
     element.innerHTML = `
     <div class="card" style="width: 18rem;">
        <img class="card-img-top" src="./images/${project.image}" alt="Card image cap">
@@ -78,17 +79,38 @@ function save_localStorage(name, description, image, date,tags) {
 }
 
 function load_localStorage() {
-  if (localStorage.getItem("Name_On_Local")) {
+  if (localStorage.getItem("Works_Object")) {
     let nombre = localStorage.getItem("Name_On_Local");
     let work = JSON.parse(localStorage.getItem("Works_Object"));
     console.log(work.date);
     // console.log(work);
   }
   else {
-    console.log("No hay Datos que mostrar");
+    showError();
     let work = JSON.parse(localStorage.getItem("Works_Object",'name'));
     console.log(work);
   }
+}
+
+
+function showError(){
+  
+
+    const noWorksDiv = document.getElementById('no-works');
+    const noWorkElement = document.createElement('div');
+    
+    noWorkElement.innerHTML = `
+    <div class="container bg-indigo-800" style="width: 18rem;">
+    <h4> No projects for show </h4>
+     </div>
+       `;
+       noWorksDiv.appendChild(noWorkElement);
+  
+  Swal.fire(
+    "You haven't created any projects yet. wait no more and start coding now",
+    'Lets Go',
+    'error'
+  )
 }
 
 
