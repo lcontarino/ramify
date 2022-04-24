@@ -9,25 +9,36 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
     //Prevent Reload Page after Form Submit
     e.preventDefault();
 
-    let storageUser     = JSON.parse(localStorage.getItem('User_Object').email);
-    let storagePassword     = JSON.parse(localStorage.getItem('User_Object').password);
+    let storageUser     = JSON.parse(localStorage.getItem('User_Object'));
+    let storagePassword     = JSON.parse(localStorage.getItem('User_Object'));
+    let storageUsers     = JSON.parse(localStorage.getItem('User_Object'));
     //let storagePassword = localStorage.getItem('User_Password');
+  
+    // for (let index = 0; index < storageUsers.length; index++) {
+    //     const element = storageUsers[index];
+    //     console.log(element[0].name)
+    // }
+
+    storageUsers.forEach(element => {
+        console.log(element[0].name)
+        if (email !== element[0].email || password !== element[0].password ) {
+            //alert('Usuario o Password incorrectos');
+            Swal.fire(
+                'The username or password is incorrect',
+                'Please try again',
+                'error'
+            )
+            
     
-
-    if (email !== storageUser || password !== storagePassword ) {
-        //alert('Usuario o Password incorrectos');
-        Swal.fire(
-            'The username or password is incorrect',
-            'Please try again',
-            'error'
-        )
-
-    }
-    else {
-        alert('Usuario Correcto');
-        window.location.href = "/userdash.html";
-    }
-
+        }
+        else {
+            alert('Usuario Correcto');
+            window.location.href = "/userdash.html";
+        }
+    
+    });
+    
+   
 })
 
 function loadUser_localStorage(email, password) {
