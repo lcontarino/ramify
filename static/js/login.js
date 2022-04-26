@@ -3,42 +3,56 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
     // Obtengo los datos del formulario HTML
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
-
-   // console.log(email, password);
+    const currentUser = email;
 
     //Prevent Reload Page after Form Submit
     e.preventDefault();
 
-    let storageUser     = JSON.parse(localStorage.getItem('User_Object'));
-    let storagePassword     = JSON.parse(localStorage.getItem('User_Object'));
-    let storageUsers     = JSON.parse(localStorage.getItem('User_Object'));
-    //let storagePassword = localStorage.getItem('User_Password');
-  
-    // for (let index = 0; index < storageUsers.length; index++) {
-    //     const element = storageUsers[index];
-    //     console.log(element[0].name)
-    // }
+    // Storage form data into LocalStorage ass an array object
+    let storageUserObject = JSON.parse(localStorage.getItem('User_Object'));
 
-    storageUsers.forEach(element => {
-        console.log(element[0].name)
-        if (email !== element[0].email || password !== element[0].password ) {
-            //alert('Usuario o Password incorrectos');
-            Swal.fire(
-                'The username or password is incorrect',
-                'Please try again',
-                'error'
-            )
-            
-    
+    // Use for debug individual values into local store
+    let storagePassword = JSON.parse(localStorage.getItem('User_Object'));
+    let storageUser = JSON.parse(localStorage.getItem('User_Object'));
+
+    // retrive users from local Storage and compare with de form input field
+
+    storageUserObject.forEach(retriveUsers => {
+        // Use for Debug users and passwords
+        // console.log(retriveUsers[0].email)
+        // console.log(retriveUsers[0].password)
+        if (email != retriveUsers[0].email && password != retriveUsers[0].password || email === '' || password ==='' ) {
+            //Sweet alert for incorrect User or Password ;
+            console.log("Form Email: " + email +" " + "Form Password: " + password )
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: 'Invalid Email or Password',
+                showConfirmButton: false,
+                timer: 2000
+            })
         }
-        else {
-            alert('Usuario Correcto');
-            window.location.href = "/userdash.html";
+         if (email === retriveUsers[0].email && password === retriveUsers[0].password) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'The username and password is correct',
+                showConfirmButton: false,
+                timer: 2000
+            })
+
+            // Use time out for set delay in redirection
+            setTimeout(() => {
+                // Use Console log for Debug
+                // console.log("Wait 3 seconds to redirect to userdash")
+                window.location.href = "/userdash.html";
+            }, 3000);
+
         }
-    
+
     });
-    
-   
+
+
 })
 
 function loadUser_localStorage(email, password) {
