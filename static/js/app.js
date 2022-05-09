@@ -125,7 +125,6 @@ function load_localStorage() {
 
 
 function showError(){
-  
 
     const noWorksDiv = document.getElementById('no-works');
     const noWorkElement = document.createElement('div');
