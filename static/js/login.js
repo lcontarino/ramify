@@ -21,7 +21,7 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
         // Use for Debug users and passwords
         // console.log(retriveUsers[0].email)
         // console.log(retriveUsers[0].password)
-        if (email != retriveUsers[0].email && password != retriveUsers[0].password || email === '' || password ==='' ) {
+        if (email != retriveUsers[0].email && password != retriveUsers[0].password || email === null || password ===null ) {
             //Sweet alert for incorrect User or Password ;
             console.log("Form Email: " + email +" " + "Form Password: " + password )
             Swal.fire({

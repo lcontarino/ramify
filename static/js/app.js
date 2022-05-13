@@ -81,8 +81,8 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
 })
 
 document.getElementById('works-list').addEventListener('click', function(e){
-  alert("Eliminar")
-  console.log(e.target)
+  // alert("Eliminar")
+  // console.log(e.target)
 
    // Create a New  Object from UI
    const ui = new UI();
