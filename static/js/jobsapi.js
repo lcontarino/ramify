@@ -25,7 +25,16 @@ const worktList = document.getElementById('works-list');
    <div class="card-body">
      <h5 class="card-title">${data.name}</h5>
      <p class="card-text">${data.description}</p>
-      <a href="#" class="btn btn-secondary btn-sm">View More</a>
+     <!-- Button trigger modal -->
+     
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#${data.name}">
+       View More
+     </button>
+
+     
+
+    
+     
      <div class="row">
       <div class="col-md-12">
       <div class="progress mt-2">
@@ -47,6 +56,27 @@ const worktList = document.getElementById('works-list');
        </div>
       </div>
    </div>
+       </div>
+  
+       <!-- Modal -->
+       <div class="modal fade" id="${data.name}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">${data.name}</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <div class="modal-body">
+               ...
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save changes</button>
+             </div>
+           </div>
+         </div>
        </div>
   
    `;
