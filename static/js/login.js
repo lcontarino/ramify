@@ -45,7 +45,7 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
             setTimeout(() => {
                 // Use Console log for Debug
                 // console.log("Wait 3 seconds to redirect to userdash")
-                window.location.href = "/userdash.html";
+                window.location.href = "/ramify/userdash.html";
             }, 3000);
 
         }
