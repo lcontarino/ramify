@@ -60,9 +60,6 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
   const date = document.getElementById('projectDate').value;
   const tags = document.getElementById('tags').value;
 
-  // log Form input. Uncoment for debug.
-  // console.log(name, description, image, date,tags);
-
   save_localStorage(name, description, image, date,tags)
   
   /*CREATE A NEW PROJECT*/
@@ -81,15 +78,12 @@ document.getElementById('project-form').addEventListener('submit', function (e) 
 })
 
 document.getElementById('works-list').addEventListener('click', function(e){
-  // alert("Eliminar")
-  // console.log(e.target)
 
    // Create a New  Object from UI
    const ui = new UI();
    // Delete Method
    ui.deleteProject(e.target);
 })
-//save_localStorage();
 
 
 function save_localStorage(name, description, image, date,tags) {

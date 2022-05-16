@@ -18,12 +18,8 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
     // retrive users from local Storage and compare with de form input field
 
     storageUserObject.forEach(retriveUsers => {
-        // Use for Debug users and passwords
-        // console.log(retriveUsers[0].email)
-        // console.log(retriveUsers[0].password)
-        if (email != retriveUsers[0].email && password != retriveUsers[0].password || email === null || password ===null ) {
+        if (email != retriveUsers[0].email || password != retriveUsers[0].password || email === null || password ===null ) {
             //Sweet alert for incorrect User or Password ;
-            console.log("Form Email: " + email +" " + "Form Password: " + password )
             Swal.fire({
                 position: 'center',
                 icon: 'error',
@@ -44,7 +40,6 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
             // Use time out for set delay in redirection
             setTimeout(() => {
                 // Use Console log for Debug
-                // console.log("Wait 3 seconds to redirect to userdash")
                 window.location.href = "/ramify/userdash.html";
             }, 3000); 
 

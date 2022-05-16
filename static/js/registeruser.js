@@ -6,7 +6,6 @@ document.getElementById('register-form').addEventListener('submit', (e) => {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-  //console.log(name, username, email, password);
   saveUser_localStorage(name, username, email, password);
   e.preventDefault();//Prevent Reload Page after Form Submit
 
@@ -25,6 +24,7 @@ function saveUser_localStorage(name, username, email, password) {
     localStorage.setItem("User_Password",password)
     // Limpiamos el Formulario de Registro. 
     document.getElementById('register-form').reset();
+    
   }
 
 
@@ -42,6 +42,18 @@ function saveUser_localStorage(name, username, email, password) {
   getUser.push(newUser);
 
   localStorage.setItem("User_Object", JSON.stringify(getUser));
-  console.log(getUser);
   document.getElementById('register-form').reset();
+  alert("1")
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'The user was successfully registered. You will be redirected to userDash',
+    showConfirmButton: false,
+    timer: 2000
+})
+   // Use time out for set delay in redirection
+   setTimeout(() => {
+     // Use Console log for Debug
+     window.location.href = "/userdash.html";
+ }, 1000); 
 }
