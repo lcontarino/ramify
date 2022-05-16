@@ -1,6 +1,6 @@
 /**/
 
-  
+
 document.getElementById("loadJsonProjects").addEventListener("click", loadJson);
 
 
@@ -10,15 +10,13 @@ function loadJson() {
       return resp.json();
     })
     .then(function (data) {
-      
-        
 
- data.forEach((data) => {
-    
-const worktList = document.getElementById('works-list');
- const element = document.createElement('div');
+      data.forEach((data) => {
 
- element.innerHTML = `
+        const worktList = document.getElementById('works-list');
+        const element = document.createElement('div');
+
+        element.innerHTML = `
     
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="./images/prueba.jpg" alt="Card image cap">
@@ -31,10 +29,6 @@ const worktList = document.getElementById('works-list');
        View More
      </button>
 
-     
-
-    
-     
      <div class="row">
       <div class="col-md-12">
       <div class="progress mt-2">
@@ -80,24 +74,20 @@ const worktList = document.getElementById('works-list');
        </div>
   
    `;
-   worktList.appendChild(element);
-  
-//           //console.log(workName.name)
-     
-//          //console.log(workName);
-       //  console.log(works.name);
-   
-  });
-  
-  let work = JSON.parse(localStorage.getItem("Works_Object"));
-    
-})
+        worktList.appendChild(element);
 
-.catch(function(error){
-    Swal.fire(
+
+      });
+
+      let work = JSON.parse(localStorage.getItem("Works_Object"));
+
+    })
+
+    .catch(function (error) {
+      Swal.fire(
         "No se encuentra el archivo json",
         'Verifica tu codigo.',
         'error'
       )
-});
+    });
 }
