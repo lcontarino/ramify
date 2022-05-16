@@ -62,46 +62,5 @@
    "date": "04/03/2022",
    "tags": ["javascript", "webdevelopment'"],
    "progress":["65%"]
- },
- {
-    "name": "Noveno Trabajo",
-   "description": "Primer trabajo de Storage",
-   "image": "https://lcontarino.github.io/ramify/images/prueba.jpg",
-   "date": "04/03/2022",
-   "tags": ["javascript", "webdevelopment'"],
-   "progress":["65%"]
- },
- {
-    "name": "Décimo Trabajo",
-   "description": "Primer trabajo de Storage",
-   "image": "https://lcontarino.github.io/ramify/images/prueba.jpg",
-   "date": "04/03/2022",
-   "tags": ["javascript", "webdevelopment'"],
-   "progress":["65%"]
- },
- {
-    "name": "UndécimoTrabajo",
-   "description": "Primer trabajo de Storage",
-   "image": "https://lcontarino.github.io/ramify/images/prueba.jpg",
-   "date": "04/03/2022",
-   "tags": ["javascript", "webdevelopment'"],
-   "progress":["65%"]
- },
- {
-    "name": "Duoécimo Trabajo",
-   "description": "Primer trabajo de Storage",
-   "image": "https://lcontarino.github.io/ramify/images/prueba.jpg",
-   "date": "04/03/2022",
-   "tags": ["javascript", "webdevelopment'"],
-   "progress":["65%"]
- },
- {
-    "name": "Décimo Trercero Trabajo",
-   "description": "Primer trabajo de Storage",
-   "image": "https://lcontarino.github.io/ramify/images/prueba.jpg",
-   "date": "04/03/2022",
-   "tags": ["javascript", "webdevelopment'"],
-   "progress":["65%"]
  }
-
   ]
